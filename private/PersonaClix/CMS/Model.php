@@ -38,9 +38,9 @@ class Model {
 
 		// Check if the database variable has been set and that it is a 
 		// valid instance of the Engine's Database class,
-		// otherwise just return since we can't do anything without it.
+		// otherwise just return an empty array since we can't do anything without it.
 		if(!$class_name::$database || !$class_name::$database instanceof \PersonaClix\Engine\Database)
-			return null;
+			return [];
 
 		// Check for custom table name and generate one if not set.
 		// The generated table name will be a lowercase version of the class name with an added "s" on the end.
